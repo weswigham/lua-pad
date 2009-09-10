@@ -1,0 +1,28 @@
+
+ // Welcome to Luapad
+ // an in-game scripting environment
+ // Created by: DarKSunrise aka Assassini
+
+ // Sample script
+
+ if(CLIENT) then // We're running this script on client
+    chat.AddText(Color(200, 0, 0, 255), "hello world") // prints 'hello world' to your chat with red color
+
+    LocalPlayer():SetColor(200, 0, 0, 255); // makes so that you see yourself as red
+
+    timer.Create("normalizeme", 60, 1, function()
+        LocalPlayer():SetColor(255, 255, 255, 255); // turns you back to your normal color after a minute
+    end);
+ end
+
+ if(SERVER) then // We're running this script on server
+    for k,v in pairs(player.GetAll()) do
+        v:SetColor(200, 0, 0, 255); // makes everyone red
+    end
+    
+    timer.Create("normalizethem", 60, 1, function()
+        for k,v in pairs(player.GetAll()) do
+            v:SetColor(255, 255, 255, 255); // turns them back to their normal color after a minute
+        end
+    end);
+ end
