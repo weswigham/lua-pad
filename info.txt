@@ -1,0 +1,13 @@
+"AddonInfo"
+{
+	"name"	"Luapad"
+	"version"	"1.15"
+	"up_date"	""
+	"author_name"	"DarKSunrise aka Assassini and Levybreak"
+	"author_email"	""
+	"author_url"	""
+	
+	"info"	"An in-game scripting environment"
+	
+	"override"	"1"
+}

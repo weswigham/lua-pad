@@ -1,0 +1,11 @@
+
+Luapad, an in-game scripting environment
+Created by DarKSunrise aka Assassini
+
+This script, may not be modified, re-released or re-uploaded
+anywhere without the author's (DarKSunrise) permission. Send
+a private message to the author in Facepunch (DarKSunrise),
+and we can discuss about one.
+
+Special thanks to Garry's Mod Finland for beta-testing, and
+Syanide for his awesome editor.
