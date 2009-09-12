@@ -339,7 +339,6 @@ end
  end
  
  function luapad.SetStatus(str, clr)
-	if CLIENT then
 	timer.Remove("luapad.Statusbar.Fade");
 	luapad.Statusbar:Clear();
 	
@@ -359,7 +358,6 @@ end
 	
 	luapad.Statusbar:AddItem(msg);
 	surface.PlaySound("common/wpn_select.wav");
-	end
  end
  
  function luapad.AddTab(name, content, path)
@@ -491,6 +489,7 @@ end
 			if(folder.Label) then
 				if(folder.Label:GetValue() != "garrysmod\\data" &&
 				folder.Label:GetValue() != "garrysmod\\lua" &&
+				folder.Label:GetValue() != "garrysmod\\gamemodes" &&
 				folder.Label:GetValue() != "garrysmod\\addons") then -- TODO: luapad.CreateFolder() function for this
 					pNode.Path = folder.Label:GetValue() .. "/" .. pNode.Path;
 				end
@@ -713,9 +712,8 @@ end
 	datastream.StreamToServer("luapad.UploadClient", objectDefintions..luapad.PropertySheet:GetActiveTab():GetPanel():GetItems()[1]:GetValue(), done, accepted)
  end
  
-if CLIENT then
-	concommand.Add("luapad", luapad.Toggle);
-end
+concommand.Add("luapad", luapad.Toggle);
+
 
 
 
